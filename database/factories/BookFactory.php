@@ -17,7 +17,7 @@ class BookFactory extends Factory
     public function definition(): array
     {
         return [
-            'title'=>fake()->title(),
+            'title'=>fake()->catchPhrase(),
             'totalPages'=>fake()->biasedNumberBetween($min = 80, $max = 250, $function = 'sqrt'),
             'rating'=>fake()->biasedNumberBetween($min = 0, $max = 10, $function = 'sqrt'),
             'isbn'=>fake()->isbn13(),
